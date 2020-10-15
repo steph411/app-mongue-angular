@@ -1,0 +1,58 @@
+<!-- <h1 style = "text-align: center;">Détails facture :</h1> -->
+
+<div class="row">
+  <div *ngIf="facture" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+    <h2>Facture : {{facture.id}}</h2>
+    <hr/>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Caissier (e) :</b></h4></label> {{facture.caissier}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Date de création :</b></h4></label> {{facture.date}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>NIU :</b></h4></label> {{facture.contribuable}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Noms patient :</b></h4></label> {{facture.patient}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Age :</b></h4></label> {{facture.age}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Sexe :</b></h4></label> {{facture.sexe}}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <br> -->
+<hr>
+<div class="row">
+  <div *ngIf="facture" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+    <h2>Détails de la prestation</h2>
+    <!-- <hr/> -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Quantité</th>
+          <th>Désignations</th>
+          <th>Prix unitaire</th>
+          <th>Prix total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{facture.quantite}}</td>
+          <td>{{facture.designation}}</td>
+          <td>{{facture.prixunitaire}}</td>
+          <td>{{facture.prixtotal}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<button (click)="list()" class="btn btn-primary">Retour à listes de factures</button><br>

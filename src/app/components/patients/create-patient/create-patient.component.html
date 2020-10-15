@@ -1,0 +1,86 @@
+<!-- <h2>Ajout Patient</h2> -->
+<div [hidden]="submitted">
+  <form (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend><h1>Nouveau patient</h1></legend>
+      <legend><h2>Informations administratifs</h2></legend>
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <label for="code">Code dossier</label>
+          <input type="text" class="form-control" id="code" disabled required [(ngModel)]="patient.code" name="code">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="date">Date de creation</label>
+          <input type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" class="form-control" id="date" required [(ngModel)]="patient.datecreation" name="date">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="name">Date de naissance</label>
+          <input type="date" class="form-control" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" id="datedenaissance" required [(ngModel)]="patient.dateNaissance" name="datedenaissance">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="sexe">Sexe</label>
+          <select id="sexe" name="sexe" class="form-control" required [(ngModel)]="patient.sexe">
+            <option value="Masculin">Masculin</option>
+            <option value="Feminin">Feminin</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="cni">CNI</label> -->
+          <input type="text" placeholder="CNI" class="form-control" id="cni" required [(ngModel)]="patient.cni" name="cni">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="noms">Noms</label> -->
+          <input type="text" placeholder="Noms" class="form-control" id="noms" required [(ngModel)]="patient.noms" name="noms">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="prenoms">Prenoms</label> -->
+          <input type="text" placeholder="Prénoms" class="form-control" id="prenoms" required [(ngModel)]="patient.prenoms" name="prenoms">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="pays">Pays</label> -->
+          <input type="text" placeholder="Cameroun" disabled value="Cameroun" class="form-control" id="pays" required [(ngModel)]="patient.pays" name="pays">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="ville">Ville</label> -->
+          <input type="text" placeholder="Ville" class="form-control" id="ville" required [(ngModel)]="patient.ville" name="ville">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="quartier">Quartier</label> -->
+          <input type="text" placeholder="Quartier" class="form-control" id="quartier" required [(ngModel)]="patient.quartier" name="quartier">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="profession">Profession</label> -->
+          <input type="text" placeholder="Profession" class="form-control" id="profession" required [(ngModel)]="patient.profession" name="profession">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="telephone">Telephone</label> -->
+          <input type="number" placeholder="Téléphone" class="form-control" id="telephone" required [(ngModel)]="patient.telephone" name="telephone">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="emailId">Email</label> -->
+          <input type="text" placeholder="Email" class="form-control" id="emailId" required [(ngModel)]="patient.email" name="emailId">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <button type="submit" class="btn btn-primary">Ajouter</button>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+
+      </div>
+    </fieldset>
+  </form>
+  <br>
+</div>
+<br>
+<!-- <app-patient-list></app-patient-list> -->

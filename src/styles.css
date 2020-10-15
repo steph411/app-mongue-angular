@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  height: 70px;
+  background-color: blue;
+  text-align: center;
+  color: white;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: turquoise;}
+#img
+{
+  /* height: 200px; */
+  background-image: url('app/img/background3.jpg');
+  background-size: 100%;
+  /* border: 2px solid darkgray; */
+  /* color: #000; text-shadow: 1px 1px 0 #fff; */
+}

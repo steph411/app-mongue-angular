@@ -1,0 +1,52 @@
+<h1 style = "text-align: center;">Informations détaillées :</h1>
+
+<hr/>
+<div class="row">
+  <div *ngIf="patient" class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+    <h2>Paramètres administratifs :</h2>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Date de création :</b></h4></label> {{patient.datecreation}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Code :</b></h4></label> {{patient.code}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>CNI :</b></h4></label> {{patient.cni}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Noms :</b></h4></label> {{patient.noms}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Prénoms :</b></h4></label> {{patient.prenoms}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Date de naissance :</b></h4></label> {{patient.dateNaissance}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Profession :</b></h4></label> {{patient.profession}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Pays :</b></h4></label> {{patient.pays}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Ville :</b></h4></label> {{patient.ville}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Quartier :</b></h4></label> {{patient.quartier}}
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+        <label><h4><b>Sexe :</b></h4></label> {{patient.sexe}}
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Retour à listes de patients</button><br>

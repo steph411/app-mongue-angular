@@ -1,0 +1,58 @@
+<mat-toolbar color="primary" class="app-header">
+  <div><a href="" target="" class="positronx">CrFilmt-HIS</a></div>
+
+  <a id="aa" mat-button [matMenuTriggerFor]="caisse">Caisse</a>
+  <a id="aa" mat-button [matMenuTriggerFor]="consultation">Consultations</a>
+  <a id="aa" mat-button>Dossiers patients</a>
+  <a id="aa" mat-button [matMenuTriggerFor]="examen">Examens</a>
+  <!-- <a id="aa" mat-button routerLink="login" routerLinkActive="active">Log in</a>
+  <a id="aa" mat-button routerLink="register" routerLinkActive="active">Register</a> -->
+
+  <span class="nav-tool-items">
+
+    <mat-menu #caisse="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="patients">Patients</button>
+      <button mat-menu-item [matMenuTriggerFor]="rendez_vous">Rendez-vous</button>
+      <button mat-menu-item [matMenuTriggerFor]="facturation">Facturation</button>
+    </mat-menu>
+
+    <mat-menu #patients="matMenu">
+      <a mat-menu-item  routerLink="create-patient" routerLinkActive="active">Nouveau patient</a>
+      <a mat-menu-item routerLink="patient-list" routerLinkActive="active">Listes des patients</a>
+    </mat-menu>
+
+    <mat-menu #rendez_vous="matMenu">
+      <a mat-menu-item routerLink="create-rdv">Nouveau rendez-vous</a>
+      <a mat-menu-item routerLink="rdv-list">Historiques des rendez-vous</a>
+    </mat-menu>
+
+    <mat-menu #facturation="matMenu">
+      <a mat-menu-item routerLink="create-facture">Nouvelle facture</a>
+      <a mat-menu-item routerLink="facture-list">Listes des factures</a>
+      <!-- <a mat-menu-item>Modifier informations factures</a> -->
+    </mat-menu>
+
+    <mat-menu #consultation="matMenu">
+      <a mat-menu-item routerLink="info-clinic">Informations cliniques</a>
+      <a mat-menu-item>Nouvelle consultation</a>
+      <a mat-menu-item>Historiques des consultations</a>
+    </mat-menu>
+
+    <mat-menu #examen="matMenu">
+      <a mat-menu-item>Ajouter nouvel examen</a>
+      <a mat-menu-item>Historiques des examens</a>
+    </mat-menu>
+
+  </span>
+</mat-toolbar>
+
+<!-- <h1 class="text-center"> {{title}} </h1> -->
+<div class = "container">
+  <br><br>
+  <router-outlet></router-outlet>
+</div>
+<!-- <footer class = "footer">
+  <div class = "container">
+      <span>All Rights Reserved 2020 @Crfilmt</span>
+  </div>
+</footer> -->

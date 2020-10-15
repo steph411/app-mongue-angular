@@ -1,0 +1,41 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Historiques des consultations</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Noms</th>
+            <th>Prénoms</th>
+            <th>Profession</th>
+            <th>Date de naissance</th>
+            <th>Pays</th>
+            <th>Ville</th>
+            <th>Telephone</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let consultation of consultations | async">
+            <td>{{consultation.codePatient}}</td>
+            <td>{{consultation.noms}}</td>
+            <td>{{consultation.prenoms}}</td>
+            <td>{{consultation.profession}}</td>
+            <td>{{consultation.dateNaissance}}</td>
+            <td>{{consultation.pays}}</td>
+            <td>{{consultation.ville}}</td>
+            <td>{{consultation.telephone}}</td>
+            <td>{{consultation.email}}</td>
+            <td>
+              <button (click)="deletePatient(consultation.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updatePatient(consultation.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="patientDetails(consultation.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

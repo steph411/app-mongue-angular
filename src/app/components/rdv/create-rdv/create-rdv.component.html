@@ -1,0 +1,44 @@
+<!-- <h2>Ajout Patient</h2> -->
+<div id="toto" [hidden]="submitted">
+  <form (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend><h2>Nouveau rendez-vous</h2></legend>
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <label for="code">Code patient</label>
+          <input type="text" class="form-control" id="code" required [(ngModel)]="rdv.code" name="code">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="noms">Noms patient</label>
+          <input type="text" class="form-control" id="code" required [(ngModel)]="rdv.patient" name="noms">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="date">Date</label>
+          <input type="date" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" class="form-control" id="date" required [(ngModel)]="rdv.date" name="date">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="heure">Heure</label>
+          <input type="time" class="form-control" id="heure" required [(ngModel)]="rdv.time" name="heure">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+
+        <div class="col-lg-4 col-md-4">
+          <label for="motif">Motif du rendez-vous</label>
+          <input type="text" class="form-control" id="motif" required [(ngModel)]="rdv.motif" name="motif">
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <label for="medecin">Médécin traitant</label>
+          <input type="text" class="form-control" id="poids" required [(ngModel)]="rdv.medecin" name="poids">
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <br>
+          <button type="submit" class="btn btn-primary">Ajouter</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<br>
+<app-rdv-list></app-rdv-list>

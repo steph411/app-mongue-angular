@@ -1,0 +1,68 @@
+<!-- <h2>Ajout Patient</h2> -->
+<div [hidden]="submitted">
+  <form (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend><h2>Mise à jour facture</h2></legend>
+      <div class="row">
+        <!-- <div class="col-lg-3 col-md-3">
+          <label for="id">ID</label>
+          <input type="text" disabled class="form-control" id="id" required [(ngModel)]="facture.id" name="id">
+        </div> -->
+        <div class="col-lg-3 col-md-3">
+          <label for="contribuable">Numéro de contribuable</label>
+          <input type="text" class="form-control" id="contribuable" required
+                  [(ngModel)]="facture.contribuable" name="contribuable">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="date">Date</label>
+          <input type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" class="form-control" id="date" required [(ngModel)]="facture.date" name="date">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="time">Heure</label>
+          <input type="time" class="form-control" id="time" required [(ngModel)]="facture.time" name="time">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <label for="sexe">Sexe</label>
+          <select id="sexe" name="sexe" class="form-control" required [(ngModel)]="facture.sexe">
+            <option value="Masculin">Masculin</option>
+            <option value="Feminin">Feminin</option>
+          </select>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="patient"></label> -->
+          <input type="text" placeholder="Noms patient" class="form-control" id="patient" required [(ngModel)]="facture.patient" name="patient">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="age"></label> -->
+          <input type="number" placeholder="Age" class="form-control" id="age" required [(ngModel)]="facture.age" name="age">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="designation">Désignation</label> -->
+          <input type="text" placeholder="Désignation" class="form-control" id="designation" required [(ngModel)]="facture.designation" name="designation">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="quantite">Quantité</label> -->
+          <input type="number" placeholder="Quantité" class="form-control" id="quantite" required [(ngModel)]="facture.quantite" name="quantite">
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="prixunitaire">Prix unitaire</label> -->
+          <input type="number" placeholder="Prix unitaire" class="form-control" id="poids" required [(ngModel)]="facture.prixunitaire" name="prixunitaire">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <!-- <label for="prixtotal">Prix total</label> -->
+          <input type="number" placeholder="Prix total" class="form-control" id="prixtotal" required [(ngModel)]="facture.prixtotal" name="prixtotal">
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <button type="submit" class="btn btn-primary">Mise à jour</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<br>
